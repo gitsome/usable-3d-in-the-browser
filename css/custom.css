@@ -1,0 +1,66 @@
+.emph {
+    color: #007bff;
+}
+.emph-light {
+    color: #83bfff;
+}
+.emph-secondary {
+    color: #ffc107;
+}
+
+.three-d {
+    position: relative;
+    perspective: 600px;
+    display: inline-block;
+    transform-origin: 50% 50%;
+}
+
+.three-d .three-d-element {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: animate3D 6s infinite ease-in-out;
+}
+
+.three-d .three-d-element-2 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: animate3D2 6s infinite ease-in-out;
+    opacity: 0.666;
+}
+
+.three-d .three-d-element-3 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: animate3D3 6s infinite ease-in-out;
+    opacity: 0.3333;
+}
+
+@keyframes animate3D {
+    0%   {transform: translateZ(0px) rotateX(0deg) rotateY(0deg);}
+    25% {transform: translateZ(350px) rotateX(20deg) rotateY(20deg);}
+    50%   {transform: translateZ(0px) rotateX(0deg) rotateY(0deg);}
+    75% {transform: translateZ(350px) rotateX(20deg) rotateY(-20deg);}
+    100%   {transform: translateZ(0px) rotateX(0deg) rotateY(0deg);}
+}
+
+@keyframes animate3D2 {
+    0%   {transform: translateZ(0px) rotateX(0deg) rotateY(0deg);}
+    25% {transform: translateZ(300px) rotateX(20deg) rotateY(20deg);}
+    50%   {transform: translateZ(0px) rotateX(0deg) rotateY(0deg);}
+    75% {transform: translateZ(300px) rotateX(20deg) rotateY(-20deg);}
+    100%   {transform: translateZ(0px) rotateX(0deg) rotateY(0deg);}
+}
+
+@keyframes animate3D3 {
+    0%   {transform: translateZ(0px) rotateX(0deg) rotateY(0deg);}
+    25% {transform: translateZ(250px) rotateX(20deg) rotateY(20deg);}
+    50%   {transform: translateZ(0px) rotateX(0deg) rotateY(0deg);}
+    75% {transform: translateZ(250px) rotateX(20deg) rotateY(-20deg);}
+    100%   {transform: translateZ(0px) rotateX(0deg) rotateY(0deg);}
+}
