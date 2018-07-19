@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>reveal.js</title>
+        <title>Making the 3D Web Usable</title>
 
         <link rel="stylesheet" href="css/reveal.css">
         <link rel="stylesheet" href="css/theme/black.css">
@@ -23,34 +23,58 @@
             link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
             document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
+
     </head>
     <body>
         <div class="reveal">
             <div class="slides">
 
                 <section>
-                    <h1>Making the
-                        <span class="three-d" style="width: 140px; height: 96px;">
-                            <span class="three-d-element">
-                                <span class="emph">3D</span>
+                    <section>
+                        <h1>Making the
+                            <span class="three-d" style="width: 140px; height: 96px;">
+                                <span class="three-d-element">
+                                    <span class="emph">3D</span>
+                                </span>
+                                <span class="three-d-element-2">
+                                    <span class="emph">3D</span>
+                                </span>
+                                <span class="three-d-element-3">
+                                    <span class="emph">3D</span>
+                                </span>
                             </span>
-                            <span class="three-d-element-2">
-                                <span class="emph">3D</span>
-                            </span>
-                            <span class="three-d-element-3">
-                                <span class="emph">3D</span>
-                            </span>
-                        </span>
-                        Web Usable!
-                    </h1>
+                            Web Usable!
+                        </h1>
+                    </section>
+                    <section data-background="resources/3d_winning.gif">
+                        <h2>Users should feel like this...</h2>
+                    </section>
+                    <section data-background="resources/3d_fail_poo.gif">
+                        <h2>Not like this...</h2>
+                    </section>
+                    <section data-background="resources/3d_fail.gif">
+                        <h2>...or this</h2>
+                    </section>
                 </section>
 
                 <section>
                     <section>
                         <h1>Browser Skillz</h1>
+                        <p>How do browsers produce <span class="emph">3D</span> effects?</p>
                     </section>
                     <section>
-                        <h2>CSS <span class="three-d" style="width: 100px; height: 60px;">
+                        <h2>CSS <span class="emph">3D</span> Transforms</h2>
+                        <p>Browser handles <span class="emph">3D</span> during composition.</p>
+                    </section>
+                    <section>
+                        <h2>WebGL</h2>
+                        <p>Browser offloads <span class="emph">3D</span> rendering to  <span class="emph">3D</span> context and GPU.</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1><span class="three-d" style="width: 140px; height: 96px;">
                             <span class="three-d-element">
                                 <span class="emph">3D</span>
                             </span>
@@ -60,60 +84,109 @@
                             <span class="three-d-element-3">
                                 <span class="emph">3D</span>
                             </span>
-                        </span> Transforms</h2>
+                        </span> Examples</h1>
                     </section>
-                    <section>
-                        <h2>WebGL</h2>
+
+                    <section data-background="resources/example_portfolio.png">
+                        <h2><a href="http://mathis-biabiany.fr/" target="_blank">Mathis Biabiany</a></h2>
                     </section>
+                    <section data-background="resources/example_youtube.png">
+                        <h2><a href="https://rewind2017.withyoutube.com/" target="_blank">YouTube Rewind 2017</a></h2>
+                    </section>
+                    <section data-background="resources/example_lopez.png">
+                        <h2><a href="http://celialopez.fr/" target="_blank">Cèlia Lopez</a></h2>
+                    </section>
+                    <section data-background="resources/example_foozball.png">
+                        <h2><a href="https://www.foosballworldcup18.com/" target="_blank">World Cup Foosball</a></h2>
+                    </section>
+                    <section data-background="resources/example_google_maps.png">
+                        <h2><a href="https://www.google.com/maps/place/Unicon,+Inc./@33.296566,-111.75156,19.35z/data=!4m5!3m4!1s0x872bac7b0e9fd9b3:0x9dd8e27339ece6ae!8m2!3d33.2965612!4d-111.7524273" target="_blank">Google Maps</a></h2>
+                    </section>
+
                 </section>
 
                 <section>
                     <section>
-                        <h1>Interacting with the Web</h1>
-                        <p>Primarily ways user interact with the web?</p>
+                        <h1>What makes <span class="three-d" style="width: 140px; height: 96px;">
+                                <span class="three-d-element">
+                                    <span class="emph">3D</span>
+                                </span>
+                                <span class="three-d-element-2">
+                                    <span class="emph">3D</span>
+                                </span>
+                                <span class="three-d-element-3">
+                                    <span class="emph">3D</span>
+                                </span>
+                            </span> Usable?</h1>
                     </section>
+
                     <section>
-                        <h2>Mouse</h2>
+                        <h2>Aesthetics</h2>
                         <ul>
-                            <li>Select</li>
-                            <li>Scroll</li>
+                            <li>Obey common design patterns</li>
+                            <li>Visuals should be accessible</li>
+                            <li>Users able to locate <span class="emph-secondary-muted">interactions</span></li>
                         </ul>
                     </section>
+
                     <section>
-                        <h2>Touch</h2>
-                        <ul>
-                            <li>Select</li>
-                            <li>Navigate (scroll / zoom / pan)</li>
-                            <li>Text Entry (virtual)</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Keyboard</h2>
+                        <h2><span class="emph-secondary-muted">Interactions</span></h2>
+
+                        <p>What types of <span class="emph-secondary-muted">input</span> do users give the web?</p>
+
                         <ul>
                             <li>Text Entry</li>
-                            <li>Select</li>
-                            <li>Cancel</li>
-                            <li>Navigate</li>
-                            <li>Shortcuts</li>
+                            <li><span class="emph-secondary">Selection</span></li>
+                            <li><span class="emph-secondary">Navigation</span></li>
                         </ul>
+
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1><span class="emph-secondary-muted">Interacting</span> with the Web</h1>
+                        <p>Primary ways users <span class="emph-secondary-muted">interact</span> with the web?</p>
                     </section>
 
                     <section>
-                        <h2>Common Denominator</h2>
+                        <h2>Keyboard <span class="emph-secondary-muted">Input</span></h2>
                         <ul>
-                            <li>Select</li>
-                            <li>Scroll</li>
+                            <li>Text Entry</li>
+                            <li>Cancel / Escape</li>
+                            <li><span class="emph-secondary">Selection</span> (spacebar, enter)</li>
+                            <li><span class="emph-secondary">Navigation</span> (next / previous / up / down)</li>
                         </ul>
+                    </section>
 
-                        <p>Used for <span class="emph">selection</span> & <span class="emph">navigation</span></p>
+                    <section>
+                        <h2>Mouse <span class="emph-secondary-muted">Input</span></h2>
+                        <ul>
+                            <li><span class="emph-secondary">Selection</span> (click)</li>
+                            <li><span class="emph-secondary">Navigation</span> (scroll / pan / zoom)</li>
+                        </ul>
+                    </section>
 
+                    <section>
+                        <h2>Touch <span class="emph-secondary-muted">Input</span></h2>
+                        <ul>
+                            <li>Text Entry (virtual keyboard)</li>
+                            <li><span class="emph-secondary">Selection</span> (tap)</li>
+                            <li><span class="emph-secondary">Navigation</span> (scroll / pan / zoom)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Selection</span> & <span class="emph-secondary">Navigation</span></h2>
+                        <p>User Experience for these types of <span class="emph-secondary-muted">interactions</span> within a <span class="emph">3D</span> setting is critical.</p>
                     </section>
 
                 </section>
 
                 <section>
                     <section>
-                        <h1><span class="three-d" style="width: 140px; height: 96px;">
+                        <h1>Making
+                            <span class="three-d" style="width: 140px; height: 96px;">
                                 <span class="three-d-element">
                                     <span class="emph">3D</span>
                                 </span>
@@ -123,35 +196,296 @@
                                 <span class="three-d-element-3">
                                     <span class="emph">3D</span>
                                 </span>
-                            </span> Examples</h1>
+                            </span> <span class="emph-secondary">Selection</span> Usable
+                        </h1>
                     </section>
+
                     <section>
-                        <h2>terror world</h2>
+                        <h2><span class="emph-secondary">Selection</span> - CSS Transforms</h2>
+                        <h3>Implementation - HTML / JavaScript</h3>
+                        <p><a href="https://codepen.io/johndavidfive/pen/rrWVRp" target="_blank">3D Form Demo</a></p>
                     </section>
+
                     <section>
-                        <h2><span class="emph">3D</span> cool site i just found</h2>
+                        <h2><span class="emph-secondary">Selection</span> - WebGL</h2>
+                        <h3>Implementation - Ray Casting</h3>
+                        <ul>
+                            <li>Convert mouse pointer into vector (ray cast)</li>
+                            <li>Test intersection of ray for candidate objects</li>
+                            <li>Consider nearest instersection point</li>
+                        </ul>
+                        <ul class="side-notes">
+                            <li>* You have to manage your own hover, mousedown, mouseup.</li>
+                        </ul>
+                        <p><a href="https://codepen.io/johndavidfive/pen/vayNGB" target="_blank">WebGL Selection Demo</a></p>
                     </section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Selection</span> Audit Time!</h2>
+                        <ul>
+                            <li>
+                                <a href="http://mathis-biabiany.fr/" target="_blank">Mathis Biabiany</a>
+                            </li>
+                            <li>
+                                <a href="https://rewind2017.withyoutube.com/" target="_blank">YouTube Rewind 2017</a>
+                            </li>
+                            <li>
+                                <a href="http://celialopez.fr/" target="_blank">Cèlia Lopez</a>
+                            </li>
+                            <li>
+                                <a href="https://www.foosballworldcup18.com/" target="_blank">World Cup Foosball</a>
+                            </li>
+                            <li>
+                                <a href="https://www.google.com/maps/place/Unicon,+Inc./@33.296566,-111.75156,19.35z/data=!4m5!3m4!1s0x872bac7b0e9fd9b3:0x9dd8e27339ece6ae!8m2!3d33.2965612!4d-111.7524273" target="_blank">Google Maps</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Selection</span> Usability Guidelines</h2>
+                        <ul>
+                            <li>Selectable objects should be obvious</li>
+                            <li>Selectable objects should be easy to select
+                                <ul>
+                                    <li>Limit movement of selectable objects</li>
+                                    <li>Should have large hit targets</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
                 </section>
 
                 <section>
+
                     <section>
                         <h1>Making <span class="three-d" style="width: 140px; height: 96px;">
-                                <span class="three-d-element">
-                                    <span class="emph">3D</span>
-                                </span>
-                                <span class="three-d-element-2">
-                                    <span class="emph">3D</span>
-                                </span>
-                                <span class="three-d-element-3">
-                                    <span class="emph">3D</span>
-                                </span>
-                            </span> <span class="emph-light">Selection</span> Usable</h1>
+                            <span class="three-d-element">
+                                <span class="emph">3D</span>
+                            </span>
+                            <span class="three-d-element-2">
+                                <span class="emph">3D</span>
+                            </span>
+                            <span class="three-d-element-3">
+                                <span class="emph">3D</span>
+                            </span>
+                        </span> <span class="emph-secondary">Navigation</span> Usable</h1>
+                        <h2>CSS Transforms <span style="opacity: 0.6;">&</span> WebGL</h2>
                     </section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Navigation</span> : <span class="emph-secondary-muted">( Discrete ) A to B </span></h2>
+                        <h3>Implementation - wire up event handlers to nav logic</h3>
+                        <p><span class="emph-secondary-muted">Input</span> is binary.</p>
+                        <ul>
+                            <li>Keyboard : arrow keys, enter</li>
+                            <li>Mouse : click / drag</li>
+                            <li>Touch : click / swipe</li>
+                        </ul>
+                        <ul class="side-notes">
+                            <li>* Animation could be linear or non-linear.</li>
+                            <li>* On screen selectable navigation elements may be used</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Navigation</span> : <span class="emph-secondary-muted">Pan</span></h2>
+                        <h3>Implementation - wire up event handlers to nav logic</h3>
+                        <p><span class="emph-secondary-muted">Input</span> is two dimensional.</p>
+                        <ul>
+                            <li>Keyboard : arrow keys</li>
+                            <li>Mouse : click & drag</li>
+                            <li>Touch : touch & drag</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Navigation</span> : <span class="emph-secondary-muted">Zoom</span></h2>
+                        <h3>Implementation - wire up event handlers to nav logic</h3>
+                        <p><span class="emph-secondary-muted">Input</span> is one dimensional.</p>
+                        <ul>
+                            <li>Keyboard : + / - / arrow keys</li>
+                            <li>Mouse : scroll wheel, double click</li>
+                            <li>Touch : pinch, double tap</li>
+                        </ul>
+                        <ul class="side-notes">
+                            <li>* On screen zoom selection may be an option.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Navigation</span> Audit Time!</h2>
+                        <ul>
+                            <li>
+                                <a href="http://mathis-biabiany.fr/" target="_blank">Mathis Biabiany</a>
+                            </li>
+                            <li>
+                                <a href="https://rewind2017.withyoutube.com/" target="_blank">YouTube Rewind 2017</a>
+                            </li>
+                            <li>
+                                <a href="http://celialopez.fr/" target="_blank">Cèlia Lopez</a>
+                            </li>
+                            <li>
+                                <a href="https://www.foosballworldcup18.com/" target="_blank">World Cup Foosball</a>
+                            </li>
+                            <li>
+                                <a href="https://www.google.com/maps/place/Unicon,+Inc./@33.296566,-111.75156,19.35z/data=!4m5!3m4!1s0x872bac7b0e9fd9b3:0x9dd8e27339ece6ae!8m2!3d33.2965612!4d-111.7524273" target="_blank">Google Maps</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Navigation</span> Usability Guidelines</h2>
+                        <ul>
+                            <li>Navigation elements should be prominent</li>
+                            <li>Provide arrows when swiping or dragging used</li>
+                            <li>Provide scroll indicator for navigation</li>
+                            <li>Feedback for swipe when used for discrete nav</li>
+                            <li>Leverage spatial associations</li>
+                            <li>Use smooth human friendly animations</li>
+                            <li>Provide alternative modes of navigation</li>
+                        </ul>
+                    </section>
+
                 </section>
 
                 <section>
+
                     <section>
-                        <h1>Making <span class="three-d" style="width: 140px; height: 96px;">
+                        <h1>A <span class="three-d" style="width: 140px; height: 96px;">
+                            <span class="three-d-element">
+                                <span class="emph">3D</span>
+                            </span>
+                            <span class="three-d-element-2">
+                                <span class="emph">3D</span>
+                            </span>
+                            <span class="three-d-element-3">
+                                <span class="emph">3D</span>
+                            </span>
+                        </span> Case Study</h1>
+                    </section>
+
+                    <section>
+                        <h2>Grasp Theory</h2>
+                        <h3>Personal CMS</h3>
+                        <ul>
+                            <li>Improve learning</li>
+                            <li>Improve recall</li>
+                            <li>Leverage spatial powers of the brain</li>
+                            <li>Intergrate traditional and 3D interfaces</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Grasp Theory</h2>
+                        <h3>Demo</h3>
+                        <ul>
+                            <li>Layered UI</li>
+                            <li>WebGL / ThreeJS / Interface</li>
+                            <li>Integration of HTML & WebGL
+                                <ul>
+                                    <li>Library labels</li>
+                                    <li>Menus when creating libraries</li>
+                                    <li>Linking content</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Selection</span> - CSS <span class="emph">3D</span></h2>
+                        <ul>
+                            <li>Standard selection using HTML / JavaScript</li>
+                            <li>Library label - positioning and size</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Selection</span> - WebGL </h2>
+                        <ul>
+                            <li>Level of detail challenges</li>
+                            <li>Selecting from a distance</li>
+                            <li>Keeping current selections centered</li>
+                        </ul>
+                        <p>Selection was generally easier to get right</p>
+                    </section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Navigation</span> - CSS <span class="emph">3D</span> & WebGL</h2>
+                        <ul>
+                            <li>Standards for which way navigation will occur</li>
+                            <li>Map navigation (standard and alternative methods)</li>
+                            <li>Non-linear discrete transitions</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Navigation</span> - CSS <span class="emph">3D</span> & WebGL</h2>
+                        <h3>Non Linear Transition Challenges</h3>
+                        <h4>Flying between libraries</h3>
+                        <ul>
+                            <li>Can't clip through mountains</li>
+                            <li>Want birdseye not motorcyclist's eye</li>
+                            <li>Getting to entry point of library</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Navigation</span> - CSS <span class="emph">3D</span> & WebGL</h2>
+                        <h3>Non Linear Transition Challenges</h3>
+                        <h4>Avoiding Mountains & Birdseye View</h3>
+                        <ul>
+                            <li>Want a smooth arc that peaks above target</li>
+                            <li>Don't want to dip with terrain</li>
+                            <li>Don't want to clip through hills</li>
+                        </ul>
+                    </section>
+
+                    <section data-background="resources/mountains_1.png"></section>
+                    <section data-background="resources/mountains_2.png"></section>
+                    <section data-background="resources/mountains_3.png"></section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Navigation</span> - CSS <span class="emph">3D</span> & WebGL</h2>
+                        <h3>Non Linear Transition Challenges</h3>
+                        <h4>Getting to library front door</h3>
+                    </section>
+
+                    <section data-background="resources/library_1.png"></section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Navigation</span> - CSS <span class="emph">3D</span> & WebGL</h2>
+                        <h3>Non Linear Transition Challenges</h3>
+                        <h4>Navigating within libraries</h3>
+                        <ul>
+                            <li>Want human friendly animation</li>
+                            <li>Go from any point to any other</li>
+                        </ul>
+                    </section>
+
+                    <section data-background="resources/library_2.png"></section>
+                    <section data-background="resources/library_3.png"></section>
+
+                    <section>
+                        <h2><span class="emph-secondary">Navigation</span> - CSS <span class="emph">3D</span> & WebGL</h2>
+                        <h3>Non Linear Transition Challenges</h3>
+                        <h4>Navigating within libraries</h3>
+                        <ul>
+                            <li>Create graph of points and edges</li>
+                            <li>Use Dijkstra's algorithm for shortest path</li>
+                            <li>Interpolate for smooth animation</li>
+                            <li>Weight edges to encourage certain paths</li>
+                        </ul>
+                        <p><a href="http://bl.ocks.org/sdjacobs/3900867adc06c7680d48" target="_blank">Dijkstra Algorithm Illustrated</a></p>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section>
+                        <h1>
+                            <span class="three-d" style="width: 140px; height: 96px;">
                                 <span class="three-d-element">
                                     <span class="emph">3D</span>
                                 </span>
@@ -161,7 +495,31 @@
                                 <span class="three-d-element-3">
                                     <span class="emph">3D</span>
                                 </span>
-                            </span> <span class="emph-light">Navigation</span> Usable</h1>
+                            </span> Usability Summary
+                        </h1>
+
+                        <ul>
+                            <li><span class="emph-secondary">Selection</span> should be intuitive</li>
+                            <li><span class="emph-secondary">Navigation</span> should be intuitive</li>
+                            <li>Leverage common patterns... duh.</li>
+                            <li>3D Non-linear navigation is hard</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h1>
+                            <span class="three-d" style="width: 600px; height: 96px;">
+                                <span class="three-d-element">
+                                    <span class="emph">The End</span>
+                                </span>
+                                <span class="three-d-element-2">
+                                    <span class="emph">The End</span>
+                                </span>
+                                <span class="three-d-element-3">
+                                    <span class="emph">The End</span>
+                                </span>
+                            </span>
+                        </h1>
                     </section>
                 </section>
 

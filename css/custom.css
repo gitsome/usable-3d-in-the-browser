@@ -1,11 +1,65 @@
+.reveal h1, .reveal h2 {
+    position: relative;
+    perspective: 300px;
+    transform-origin: 50% 50%;
+    color: rgba(255,255,255, 0.9);
+    text-shadow: 0px 0px 8px #000;
+}
+.reveal h3 {
+    color: rgba(255,255,255, 0.85);
+}
+.reveal * {
+    color: rgba(255,255,255, 0.75);
+}
+.reveal h1 a, .reveal h2 a {
+    display: inline-block;
+    padding: 45px;
+    border-radius: 23px;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 15px #007bff;
+    text-shadow: 0px 0px 8px #000;
+    transform: translateZ(0px) rotateX(20deg) rotateY(0deg);
+}
+
+.reveal a {
+    text-decoration: underline;
+}
+
+.reveal ul ul li {
+    opacity: 0.85;
+    font-size: 75%;
+}
+
 .emph {
     color: #007bff;
 }
-.emph-light {
+p .emph, .emph-light {
     color: #83bfff;
 }
 .emph-secondary {
     color: #ffc107;
+    text-shadow: 0px 0px 15px #ffc107;
+}
+.emph-secondary-muted {
+    color: #fff;
+    text-shadow: 0px 0px 18px rgba(254, 193, 8, 1.0);
+}
+
+.reveal ul.side-notes {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 30px;
+}
+.reveal ul.side-notes li {
+    font-size: 60%;
+    color: #83bfff;
+    padding-top: 5px;
+}
+
+.tint {
+    -webkit-filter: sepia(1) hue-rotate(200deg);
+    filter: sepia(1) hue-rotate(200deg);
 }
 
 .three-d {
@@ -13,6 +67,7 @@
     perspective: 600px;
     display: inline-block;
     transform-origin: 50% 50%;
+    text-shadow: none;
 }
 
 .three-d .three-d-element {
@@ -29,7 +84,7 @@
     width: 100%;
     height: 100%;
     animation: animate3D2 6s infinite ease-in-out;
-    opacity: 0.666;
+    opacity: 0.5;
 }
 
 .three-d .three-d-element-3 {
@@ -38,7 +93,7 @@
     width: 100%;
     height: 100%;
     animation: animate3D3 6s infinite ease-in-out;
-    opacity: 0.3333;
+    opacity: 0.25;
 }
 
 @keyframes animate3D {
