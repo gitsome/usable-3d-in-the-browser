@@ -8,6 +8,9 @@
 .reveal h3 {
     color: rgba(255,255,255, 0.85);
 }
+.reveal h4 {
+    color: #83bfff;
+}
 .reveal * {
     color: rgba(255,255,255, 0.75);
 }
